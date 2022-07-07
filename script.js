@@ -1,36 +1,48 @@
-firstCard = 13
-secondCard = 8
+// let cardEl2 = document.getElementById("card-el2");
+// let cardEl3 = document.getElementById("card-el3");
 
 // let firstCard = document.getElementById("card-el1")
 // let secondCard = document.getElementById("card-el2")
-let sum = firstCard + secondCard
-let blackJack = false
-let isAlive = true
-let message =""
-let messageEl = document.getElementById("message-el")
 
+firstCard = 13;
+secondCard = 1;
+cards: [firstCard, secondCard];
+let sum = firstCard + secondCard;
+let blackJack = false;
+let isAlive = true;
+let message = "";
+let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+let cardEl = document.getElementById("card-el");
 
-function startGame(){
-    
-    if( sum <= 20){
-        message =" Do you want to draw another card? "
-       
-    
-    }else if( sum === 21){
-        message ="you`ve won congratulations BLACK JACK"
-        blackJack = true
-    }else{
-        message = "you`ve lost "
-        isAlive = false
+function renderGame() {
+    sumEl.textContent = "Sum: " + sum;
+    cardEl.textContent = "Cards: " + cards[0] + " - " + card[1];
+    // cardEl2.textContent = "Card 2: " + secondCard;
+
+    if (sum < 20) {
+        message = " Do you want to draw another card? ";
+    } else if (sum === 21) {
+        message = "you`ve won congratulations BLACK JACK";
+        blackJack = true;
+    } else {
+        message = "you`ve lost ";
+        isAlive = false;
     }
-
+    messageEl.textContent = message;
 }
 
+function newCard() {
+    let card = 5;
 
+    sum += card;
 
-messageEl.textContent = message
+    renderGame();
+}
 
-
+function startGame() {
+    renderGame();
+}
 // let age = 110;
 
 // if(age < 100){
@@ -40,3 +52,11 @@ messageEl.textContent = message
 // } else{
 //     console.log("YOU ALREADY HAVE A CARD");
 // }
+
+let messages = [" hi", "how are you"];
+
+let newMessages = "i`m good";
+messages.splice(1);
+messages.push(newMessages);
+
+console.log(messages);

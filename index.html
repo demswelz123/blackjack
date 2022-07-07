@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
-</head>
-<body>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>BLACK JACK</h1>
+        <p id="message-el">Want to play a round?</p>
 
-    <h1>BLACK JACK</h1>
-    <p id="message-el">Want to play a round?</p>
-   
-    <center> <p id="card-el" >card 1:</p>
-    <p id="card-el">card 2:</p>
-    <p id="sum-el">Sum:</p>
-    <button id="start-btn" onclick="startGame()">START GAME</button></center>
+        <center>
+            <p id="card-el">Cards:</p>
+            <!-- <p id="card-el2">Card 2:</p> -->
 
-    <script src="./script.js"></script>
-</body>
+            <p id="sum-el">Sum:</p>
+            <button id="start-btn" onclick="startGame()">START GAME</button>
+            <br />
+            <button id="newCard-btn" onclick="newCard()">NEW CARD</button>
+        </center>
+
+        <script src="./script.js"></script>
+    </body>
 </html>

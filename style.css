@@ -11,22 +11,21 @@ body {
     font-weight: bold;
     color: rgb(12, 17, 7);
 }
-#sum-el{
-
-    font-size:20px ;
+#sum-el {
+    font-size: 20px;
     font-weight: bold;
 }
-#card-el{
-    
-    font-size:20px ;
+#card-el1 {
+    font-size: 20px;
     font-weight: bold;
 }
-#start-btn{
+#start-btn {
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 8px;
-    border: 2px solid #4CAF50;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 2px solid #4caf50;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     margin: 4px 2px;
     opacity: 0.6;
@@ -34,6 +33,27 @@ body {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-   
 }
-#start-btn:hover {opacity: 1}
+#start-btn:hover {
+    opacity: 1;
+}
+
+#card-el {
+    font-size: 20px;
+    font-weight: bold;
+}
+#newCard-btn {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #4caf50;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
