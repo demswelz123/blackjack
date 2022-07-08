@@ -4,9 +4,10 @@
 // let firstCard = document.getElementById("card-el1")
 // let secondCard = document.getElementById("card-el2")
 
-firstCard = 13;
-secondCard = 1;
-cards: [firstCard, secondCard];
+firstCard = randomCard();
+secondCard = randomCard();
+
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let blackJack = false;
 let isAlive = true;
@@ -16,9 +17,13 @@ let sumEl = document.getElementById("sum-el");
 let cardEl = document.getElementById("card-el");
 
 function renderGame() {
-    sumEl.textContent = "Sum: " + sum;
-    cardEl.textContent = "Cards: " + cards[0] + " - " + card[1];
+    cardEl.textContent = "Cards: ";
+
+    for (let i = 0; i < cards.length; i++) {
+        cardEl.textContent += cards[i] + "  ";
+    }
     // cardEl2.textContent = "Card 2: " + secondCard;
+    sumEl.textContent = "Sum: " + sum;
 
     if (sum < 20) {
         message = " Do you want to draw another card? ";
@@ -33,7 +38,9 @@ function renderGame() {
 }
 
 function newCard() {
-    let card = 5;
+    let card = randomCard();
+
+    cards.push(card);
 
     sum += card;
 
@@ -42,6 +49,10 @@ function newCard() {
 
 function startGame() {
     renderGame();
+}
+function randomCard() {
+    let randomNumer = Math.floor(Math.random() * 13) + 1;
+    return randomNumer;
 }
 // let age = 110;
 
@@ -53,10 +64,23 @@ function startGame() {
 //     console.log("YOU ALREADY HAVE A CARD");
 // }
 
-let messages = [" hi", "how are you"];
+// let messages = [" hi", "how are you"];
 
-let newMessages = "i`m good";
-messages.splice(1);
-messages.push(newMessages);
+// let newMessages = "i`m good";
+// messages.splice(1);
+// messages.push(newMessages);
 
-console.log(messages);
+// console.log(messages);
+
+// for (let i = 10; i < 101; i += 10) {
+//     console.log(i);
+// }
+
+// let flooredNumber = math.floor((math.random) * 6) + 1;  [1-5]
+// console.log(flooredNumber);
+
+// function rollDice() {
+//     let randomNumer = Math.floor(Math.random() * 6) + 1;
+//     return randomNumer;
+// }
+// console.log(rollDice());
