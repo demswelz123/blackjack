@@ -12,6 +12,13 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardEl = document.getElementById("card-el");
+let playerEl = document.getElementById("player-el");
+
+let player = {
+    name: "Sylph ",
+    chips: " 200",
+};
+playerEl.textContent = player.name + ": $ " + player.chips;
 
 function renderGame() {
     cardEl.textContent = "Cards: ";
@@ -28,20 +35,19 @@ function renderGame() {
         message = "you`ve won congratulations BLACK JACK";
         blackJack = true;
     } else {
-        message = "you`ve lost ";
+        message = "you`re out of the game ";
         isAlive = false;
     }
     messageEl.textContent = message;
 }
 
 function newCard() {
-    let card = randomCard();
-
-    cards.push(card);
-
-    sum += card;
-
-    renderGame();
+    if (isAlive === true && blackJack === false) {
+        let card = randomCard();
+        cards.push(card);
+        sum += card;
+        renderGame();
+    }
 }
 
 function startGame() {
@@ -95,3 +101,25 @@ function randomCard() {
 //     return randomNumer;
 // }
 // console.log(rollDice());
+
+// and logical
+// let hasSolvedChallenge = false;
+// let hasHintsLeft = false;
+
+// if (hasSolvedChallenge === false && hasHintsLeft === false) {
+//     showSolution();
+// }
+// function showSolution() {
+//     console.log("showing solution");
+// }
+
+// OR logical
+// let likeDocumentaries = true;
+// let likeStartups = false;
+// if (likeDocumentaries === false || likeStartups === false) {
+//     recommendMovie();
+// }
+
+// function recommendMovie() {
+//     console.log(" recommend the movie");
+// }
