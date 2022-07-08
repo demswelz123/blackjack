@@ -4,13 +4,10 @@
 // let firstCard = document.getElementById("card-el1")
 // let secondCard = document.getElementById("card-el2")
 
-firstCard = randomCard();
-secondCard = randomCard();
-
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let blackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
@@ -48,11 +45,25 @@ function newCard() {
 }
 
 function startGame() {
+    isAlive = true;
+    let firstCard = randomCard();
+    let secondCard = randomCard();
+
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+
     renderGame();
 }
 function randomCard() {
     let randomNumer = Math.floor(Math.random() * 13) + 1;
-    return randomNumer;
+
+    if (randomNumer > 10) {
+        return 10;
+    } else if (randomNumer === 1) {
+        return 11;
+    } else {
+        return randomNumer;
+    }
 }
 // let age = 110;
 
